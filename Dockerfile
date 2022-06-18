@@ -5,9 +5,6 @@ ARG MARIADB_VERSION='10.5'
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# This volume should be defined first, because we don't want the default DB to be preserved
-# VOLUME db:/var/lib/mysql
-
 RUN apt-get update && \
 	# Installing Tor, Supervisor
 	apt-get install -y --no-install-recommends tor supervisor && \
